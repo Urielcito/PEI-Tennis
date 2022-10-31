@@ -1,6 +1,7 @@
 {
   "name": "bf-pei-react-java-baufest-tennis",
   "version": "1.0.0",
+  "homepage": "https://urielcito.github.io/PEI-Tennis",
   "description": "PEI - Baufest Tennis",
   "main": "index.js",
   "scripts": {
@@ -9,7 +10,9 @@
     "webpack:dev": "webpack-cli serve --mode development",
     "server:mock": "nodemon server/server.js",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -54,6 +57,7 @@
     "cookie-parser": "^1.4.5",
     "css-loader": "^5.2.4",
     "express": "^4.17.1",
+    "gh-pages": "^4.0.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "prettier": "^2.2.1",
